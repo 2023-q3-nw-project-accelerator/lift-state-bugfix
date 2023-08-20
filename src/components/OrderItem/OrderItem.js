@@ -1,4 +1,4 @@
-import './OrderItem.css';
+import "./OrderItem.css";
 
 const OrderItem = ({ item, onClick }) => {
   const { name, price, quantity } = item;

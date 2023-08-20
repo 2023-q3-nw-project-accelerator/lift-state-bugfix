@@ -1,12 +1,9 @@
+import "./SearchBar.css";
 
-import './SearchBar.css';
+const SearchBar = ({ handleChange, input }) => {
+  // remove state and handle change and prop setFilteredItems from searchBar
+  // add the handle change prop here
 
-const SearchBar = ({ items, handleChange, input }) => {
-
-// remove state and handle change and prop setFilteredItems from searchBar 
-// add the handle change prop here
-
-  
   return (
     <div className="SearchBar">
       <input
