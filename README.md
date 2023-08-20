@@ -55,10 +55,10 @@ Steps to reproduce:
 2.
 ...
 **Expected result**:
-Clicking the "add t order" button should add that selected item to the order box.
+Clicking the "add to order" button should add that selected item to the order box.
 
 **Actual result**:
-The selected item does not get adding to the order box.
+The selected item does not get added to the order box.
 ```
 
 ## STEP 2: PLAN 
