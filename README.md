@@ -3,9 +3,9 @@
 ## TEAM MEMBERS
 List your team members here
 ```
-1.
-2.
-3.
+1. Lennie Nurse
+2. Ziqian Pan
+3. Jede Brahma
 ...
 ```
 
@@ -30,24 +30,29 @@ You can refer to the [deployed and fixed version of this site](https://lift-stat
 
 ### BUG 1
 ```
-// type your answer here
+
 Steps to reproduce:
-1.
+1. when click on button" add to order" on grandma pie 
 2.
 ...
 **Expected result**:
+grandma pie appears on order page to the right
 **Actual result**:
+nothing
 ```
 
 ### BUG 2
 ```
 // type your answer here
 Steps to reproduce:
-1.
+1. when order button is clicked on selected item - 
 2.
 ...
 **Expected result**:
+item with amount  - quantity should appear
+remove button should also appear
 **Actual result**:
+nothing appears in order section
 ```
 
 ## STEP 2: PLAN 
@@ -60,8 +65,15 @@ How will you fix each bug? In your group, make a plan. Write down the key steps.
 ### BUG 1
 ```
 Key steps to fix the bug
-1.
-2.
+1.remove input state and handle change from searchBar 
+2.add state from searchBar to Menu
+3.handleChange function goes on menu
+4.use variable instead of filtered items on menu - pass the value to search bar 
+5.remove filtered state from app, searchBar, menu
+6.add input as a prop to searchBar
+7.add the handle change prop to searchBar
+// 
+// 
 ...
 ```
 

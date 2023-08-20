@@ -1,16 +1,9 @@
-import { useState } from 'react';
-import './SearchBar.css';
+import "./SearchBar.css";
 
-const SearchBar = ({ items, setFilteredItems }) => {
-  const [input, setInput] = useState('');
+const SearchBar = ({ handleChange, input }) => {
+  // remove state and handle change and prop setFilteredItems from searchBar
+  // add the handle change prop here
 
-  const handleChange = (e) => {
-    setInput(e.target.value);
-    const filteredItems = items.filter((item) => {
-      return item.name.toLowerCase().includes(input.toLowerCase());
-    });
-    setFilteredItems(filteredItems);
-  };
   return (
     <div className="SearchBar">
       <input

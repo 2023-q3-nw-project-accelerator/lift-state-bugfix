@@ -1,6 +1,6 @@
-import Item from '../Item/Item';
-import { addToOrder } from '../../helpers/orderHelpers';
-import './Items.css';
+import Item from "../Item/Item";
+import { addToOrder } from "../../helpers/orderHelpers";
+import "./Items.css";
 
 const Items = ({ items, order, setOrder }) => {
   const handleAddToOrder = (id) => {
