@@ -6,6 +6,7 @@ List your team members here
 1. Antonio
 2. Hector
 3. Bo
+4. James
 ...
 ```
 
