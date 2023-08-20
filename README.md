@@ -3,9 +3,9 @@
 ## TEAM MEMBERS
 List your team members here
 ```
-1.
-2.
-3.
+1. Antonio
+2. Hector
+3. Bo
 ...
 ```
 
@@ -32,22 +32,32 @@ You can refer to the [deployed and fixed version of this site](https://lift-stat
 ```
 // type your answer here
 Steps to reproduce:
-1.
-2.
+
+1. Type into the searchbar
+2. For example: type in "pi"
+3. erase the string in the searchbar
+4. the search result remains
 ...
 **Expected result**:
+After the user types into the searchbar and erases their search query the results should display in full.
+
 **Actual result**:
+When user types in the searchbar and erases their query the results are not displayed correctly.
 ```
 
 ### BUG 2
 ```
 // type your answer here
 Steps to reproduce:
-1.
+
+1. Clicking the "add to order" button is not adding the selected item to the order
 2.
 ...
 **Expected result**:
+Clicking the "add t order" button should add that selected item to the order box.
+
 **Actual result**:
+The selected item does not get adding to the order box.
 ```
 
 ## STEP 2: PLAN 
