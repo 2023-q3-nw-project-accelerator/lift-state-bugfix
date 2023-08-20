@@ -4,17 +4,17 @@
  with left column getting 70% of width
 */
 @media (min-width: 768px) {
-    .Grid {
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-    }
+  .Grid {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
 
-    .Grid>*:first-child {
-        flex: 1 1 70%;
-    }
+  .Grid > *:first-child {
+    flex: 1 1 70%;
+  }
 
-    .Grid>*:nth-child(2) {
-        flex: 1 1 30%;
-    }
+  .Grid > *:nth-child(2) {
+    flex: 1 1 30%;
+  }
 }
