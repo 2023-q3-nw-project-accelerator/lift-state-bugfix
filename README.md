@@ -3,7 +3,7 @@
 ## TEAM MEMBERS
 List your team members here
 ```
-1.
+1. Wisdom
 2.
 3.
 ...
@@ -30,24 +30,23 @@ You can refer to the [deployed and fixed version of this site](https://lift-stat
 
 ### BUG 1
 ```
-// type your answer here
+When I type in the search bar, the list of items is filtered and I only see items whose name contains the text in the search bar.
 Steps to reproduce:
-1.
-2.
+1. User types "pie" into search bar
+2. User deletes "pie" from search bar
 ...
-**Expected result**:
-**Actual result**:
+**Expected result**: All items should be shown
+**Actual result**: Only items containing "pie" are shown
 ```
 
 ### BUG 2
 ```
-// type your answer here
+When I click "Add to Order" the item is added to the order with quantity 1. If it is already in the order, its quantity increments. When I click "Remove", the quantity decreases. When the quantity reaches 0, the item disappears from the order.
 Steps to reproduce:
-1.
-2.
+1. User clicks on "add to order" button
 ...
-**Expected result**:
-**Actual result**:
+**Expected result**: Item should be added to the order
+**Actual result**: Items are not added to the order
 ```
 
 ## STEP 2: PLAN 
@@ -60,16 +59,18 @@ How will you fix each bug? In your group, make a plan. Write down the key steps.
 ### BUG 1
 ```
 Key steps to fix the bug
-1.
-2.
+1. Remove filteredItems state from App component and props it passed to other componenets
+2. Move input state and handleChange function from Searchbar component up to parent Menu component
+3. Break up handleChange function so that the input and the filtering is done separately
+4. Pass props down to Searchbar component and remove unneccessary props from Searchbar and Menu components
 ...
 ```
 
 ### BUG 2
 ```
 Key steps to fix the bug
-1.
-2.
+1. Remove state from Order component 
+2. Pass props to order component from App component
 ...
 ```
 ## STEP 3: FIX THE BUGS

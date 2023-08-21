@@ -9,7 +9,6 @@ import { useEffect, useState } from 'react';
 function App() {
   const [loading, setLoading] = useState(false);
   const [items, setItems] = useState([]);
-  const [filteredItems, setFilteredItems] = useState([]);
   const [order, setOrder] = useState({});
 
   const API_URL = 'https://px32id5fdg.execute-api.us-east-1.amazonaws.com';
@@ -20,12 +19,12 @@ function App() {
     const json = await res.json();
     const { data } = json;
     setItems(data);
-    setFilteredItems(data);
     setLoading(false);
   };
   useEffect(() => {
     fetchData();
   }, []);
+  
 
   const renderLoadingOrMenu = () => {
     if (loading) {
@@ -33,11 +32,9 @@ function App() {
     }
     return (
       <Menu
-        filteredItems={filteredItems}
         items={items}
         order={order}
         setOrder={setOrder}
-        setFilteredItems={setFilteredItems}
       />
     );
   };
