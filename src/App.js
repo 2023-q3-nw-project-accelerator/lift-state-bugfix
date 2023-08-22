@@ -1,18 +1,16 @@
-import Grid from './components/Grid/Grid';
-import Menu from './components/Menu/Menu';
-import Order from './components/Order/Order';
-// Uncomment to import these helpers
-// import { addToOrder, removeFromOrder } from './helpers/orderHelpers';
-import './App.css';
-import { useEffect, useState } from 'react';
+import Grid from "./components/Grid/Grid";
+import Menu from "./components/Menu/Menu";
+import Order from "./components/Order/Order";
+import { addToOrder, removeFromOrder } from "./helpers/orderHelpers";
+import "./App.css";
+import { useEffect, useState } from "react";
 
 function App() {
   const [loading, setLoading] = useState(false);
   const [items, setItems] = useState([]);
-  const [filteredItems, setFilteredItems] = useState([]);
   const [order, setOrder] = useState({});
 
-  const API_URL = 'https://px32id5fdg.execute-api.us-east-1.amazonaws.com';
+  const API_URL = "https://px32id5fdg.execute-api.us-east-1.amazonaws.com";
 
   const fetchData = async () => {
     setLoading(true);
@@ -20,25 +18,28 @@ function App() {
     const json = await res.json();
     const { data } = json;
     setItems(data);
-    setFilteredItems(data);
     setLoading(false);
   };
   useEffect(() => {
     fetchData();
   }, []);
 
+  const handleAddToOrder = (id) => {
+    const updatedOrder = addToOrder(order, id);
+    setOrder(updatedOrder);
+  };
+
+  const handleRemoveFromOrder = (id) => {
+    const updatedOrder = removeFromOrder(order, id);
+    setOrder(updatedOrder);
+  };
+
   const renderLoadingOrMenu = () => {
     if (loading) {
       return <div className="App--loading">Loading...</div>;
     }
     return (
-      <Menu
-        filteredItems={filteredItems}
-        items={items}
-        order={order}
-        setOrder={setOrder}
-        setFilteredItems={setFilteredItems}
-      />
+      <Menu items={items} order={order} handleAddToOrder={handleAddToOrder} />
     );
   };
 
@@ -47,7 +48,11 @@ function App() {
       <h1>Our Menu</h1>
       <Grid className="App__menu-grid">
         {renderLoadingOrMenu()}
-        <Order items={items} />
+        <Order
+          items={items}
+          order={order}
+          handleRemoveFromOrder={handleRemoveFromOrder}
+        />
       </Grid>
     </div>
   );
